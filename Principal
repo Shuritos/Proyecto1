@@ -1,0 +1,117 @@
+package cuadradoycubo;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import javax.net.ssl.SSLEngineResult.Status;
+
+public class Principal {
+	static ArrayList<lados1> llenado = new ArrayList<lados1>();	
+	static Scanner entrada= new Scanner(System.in);
+	public static void main(String[] args) {
+		medidaLados();
+
+
+	}
+	public static void medidaLados() {
+		int opcion;
+		char respuesta = 0;
+
+		System.out.println("Inserte la medida de los lados");
+		double medida = entrada.nextDouble();
+		do {
+			do {
+				System.out.println("La medida actual es: "+ medida);
+				System.out.println("Digite el calculo deseado con la medida que dio");
+				System.out.println("1.-Calcular Perimetro y Area de un cuadrado");
+				System.out.println("2.-Calcular Area y Volumen de un cubo");
+				System.out.println("3.-Cancelar");
+				System.out.println("4.-Terminar la ejecucion");
+				opcion = entrada.nextInt();
+			}while(opcion<1 || opcion>4 || opcion==3);
+
+
+			switch(opcion) {
+			
+			case 1: opcionUno(medida);
+			mostrarResultado();
+			int razon;
+			System.out.println("La medida actual es: "+ medida);
+			System.out.println("Digite una opcion:");
+			System.out.println("1.-Ingresar otro numero");
+			System.out.println("2.-Salir al menu de calculos disponibles");
+			System.out.println("3.-Salir del programa");
+			razon = entrada.nextInt();
+			switch(razon){
+			case 1:
+				Principal.main(null);
+				break;
+			case 2: 
+
+				break;
+			case 3:
+				System.exit(razon);
+			}
+			break;
+			case 2: opcionDos(medida);
+			mostrarResultado2();
+			int razon1;
+			System.out.println("La medida actual es: "+ medida);
+			System.out.println("Digite una opcion:");
+			System.out.println("1.-Ingresar otro numero");
+			System.out.println("2.-Salir al menu de calculos disponibles");
+			System.out.println("3.-Salir del programa");
+			razon1 = entrada.nextInt();
+			switch(razon1){
+			case 1:
+				Principal.main(null);
+				break;
+			case 2: 
+
+				break;
+			case 3:
+			
+				System.exit(razon1);
+			}
+			break;
+			case 3:
+				Principal.main(null);
+				break;
+			case 4:
+				System.exit(opcion);
+				break;
+			}
+			System.out.println("");
+		}while (respuesta==0);
+
+
+	}
+
+
+	public static void opcionUno(double medida) {
+
+		Cuadrado cuadrado = new Cuadrado(medida);
+
+		llenado.add(cuadrado);
+	}
+	public static void opcionDos(double medida) {
+
+		Cubo cubo = new Cubo(medida);
+		llenado.add(cubo);
+
+
+	}
+	public static void mostrarResultado() {
+		for(lados1 ladis: llenado) {
+			System.out.println("Perimetro= "+ladis.perimetroP());
+			System.out.println("Area= "+ladis.areaP());
+			System.out.println("");
+		}
+	}
+	public static void mostrarResultado2() {
+		for(lados1 ladis1: llenado) {
+			System.out.println("Area= "+ ladis1.areaV());
+			System.out.println("Volumen= "+ ladis1.Volumen());
+			System.out.println("");
+		}
+	}
+}
