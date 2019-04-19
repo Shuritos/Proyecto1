@@ -1,4 +1,5 @@
 SERGIO SANDOVAL ROSALES
 sergiosandovlro8021@hotmail.com
-PARA ABRIR ESTE PROGRAMA ES REQUERIDO ECLIPSE CON UNA VERSION DEL 2018 O SUPERIOR.
-ESTE PUEDE TRADUCIR CLAVER MORSE, NUMEROS ARABIGOS A ROMAMANOS Y UN SISTEMA DE CALCULO DE PERIMETRO,AREA Y VOLUMEN CON CUADRADO Y CUBO.
+El programa de codigo morse. en el solamente se deben ingresar letras y numeros.
+El programa de numero rabigoARomano solamente requiere un numero arabio.
+El programa de calculo de area,perimetro y volumen solamente se requiere un datoy naver en el menu ocn umeros.
