@@ -1,0 +1,20 @@
+package cuadradoycubo;
+
+public abstract class lados1 {
+	protected int lados;
+
+	public lados1(int lados) {
+		this.lados = lados;
+	}
+	public int getlados() {
+		return lados;
+	}
+	@Override
+	public String toString() {
+		return "Los lados miden: "+ lados;
+	}
+	public abstract double areaP();
+	public abstract double perimetroP();
+	public abstract double areaV();
+	public abstract double Volumen();
+}
