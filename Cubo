@@ -1,0 +1,26 @@
+package cuadradoycubo;
+
+public class Cubo extends Cuadrado{
+	private double lado;
+
+	public Cubo(double lado) {
+		super(1);
+		this.lado = lado;
+	}
+	public double getlado() {
+	return lado;
+	} 
+	@Override
+	public String toString () {
+		return "Las doce aristas miden" + lado;
+	}
+	public double areaV() {
+		
+		return (lado*lado)*6; 
+	}
+	public double Volumen() {
+		
+		return lado*lado*lado;
+	}
+	
+}
