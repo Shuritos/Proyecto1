@@ -1,0 +1,40 @@
+package cuadradoycubo;
+
+public  class  Cuadrado extends lados1 {
+	private double lado;
+
+	
+	public Cuadrado(double lado) {
+		super(1);
+		this.lado = lado;
+		
+		
+	}
+
+	public double getLado() {
+		return lado;
+	}
+
+	@Override
+	public String toString() {
+		return "Cuadrado\n" + super.toString() + "\nlado: " + lado;
+	}
+	@Override
+	public double areaP () {
+		return lado*lado;	}
+	public double perimetroP() {
+		return lado+lado+lado+lado;
+	}
+
+	@Override
+	public double areaV() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double Volumen() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}
